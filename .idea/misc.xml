@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MyRepositorys/ShowMoreWithClickableTextView/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/MyRepositorys/ShowMoreWithClickableTextView/app/src/main/res/drawable/back_text.xml" value="0.2546875" />
+        <entry key="..\:/MyRepositorys/ShowMoreWithClickableTextView/app/src/main/res/drawable/fade_back.xml" value="0.17037037037037037" />
+        <entry key="..\:/MyRepositorys/ShowMoreWithClickableTextView/app/src/main/res/layout/activity_main.xml" value="0.4" />
       </map>
     </option>
   </component>

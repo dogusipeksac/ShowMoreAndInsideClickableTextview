@@ -90,16 +90,28 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/description_text"
                         android:layout_centerInParent="true"
-                        android:textAlignment="textStart"
                         android:text="Daha fazla göster"
+                        android:textAlignment="center"
+                        android:background="@android:color/transparent"
                         android:textColor="@color/purple_700"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/show1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/description_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="-9dp"
+                        android:background="@drawable/back_text"
+                        android:textAlignment="center"
                         android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/hide"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/show"
+                        android:layout_below="@+id/description_text"
                         android:layout_alignEnd="@+id/description_text"
                         android:text="Daha az göster"
                         android:textColor="@color/purple_700"

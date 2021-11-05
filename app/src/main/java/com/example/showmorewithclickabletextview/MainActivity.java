@@ -6,13 +6,14 @@ import android.animation.ObjectAnimator;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
-    TextView descText;
+    TextView descText,showBackTextView;
     TextView show, hide;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         descText = (TextView) findViewById(R.id.description_text);
         show = findViewById(R.id.show);
+        showBackTextView=findViewById(R.id.show1);
         updateColorSymbols(descText);
         show.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
                 show.setVisibility(View.INVISIBLE);
                 hide.setVisibility(View.VISIBLE);
+                showBackTextView.setVisibility(View.GONE);
                 expandTextView(descText);
             }
         });
@@ -38,13 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
                 hide.setVisibility(View.INVISIBLE);
                 show.setVisibility(View.VISIBLE);
+                showBackTextView.setVisibility(View.VISIBLE);
                 collapseTextView(descText,4);
 
             }
         });
     }
     private void expandTextView(TextView tv){
-        ObjectAnimator animation = ObjectAnimator.ofInt(tv, "maxLines", tv.getLineCount());
+        ObjectAnimator animation = ObjectAnimator.ofInt(
+                tv,
+                "maxLines",
+                tv.getLineCount());
         animation.setDuration(350).start();
     }
 
@@ -52,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         ObjectAnimator animation = ObjectAnimator.ofInt(tv, "maxLines", numLines);
         animation.setDuration(350).start();
     }
-
     public  void updateColorSymbols(TextView textView){
         new PatternEditableBuilder().
                 addPattern(Pattern.compile("\\#(\\w+)"), Color.RED,
@@ -76,4 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    
 }
