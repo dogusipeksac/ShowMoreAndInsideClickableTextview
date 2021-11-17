@@ -102,10 +102,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/description_text"
                         android:layout_centerVertical="true"
-                        android:layout_marginTop="-9dp"
+                        android:layout_marginTop="-20dp"
                         android:background="@drawable/back_text"
                         android:textAlignment="center"
-                        android:textSize="15sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/hide"
@@ -114,9 +114,9 @@
                         android:layout_below="@+id/description_text"
                         android:layout_alignEnd="@+id/description_text"
                         android:text="Daha az göster"
+                        android:textAlignment="textEnd"
                         android:textColor="@color/purple_700"
                         android:textSize="15sp"
-                        android:textAlignment="textEnd"
                         android:visibility="invisible" />
                 </RelativeLayout>
 
